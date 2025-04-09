@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo</title>
+  <style>
+    body {
+      background-color: aquamarine;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .top-banner img {
+      width: 100%;
+    }
+
+    .nav-bar {
+      background-color: gray;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 25%;
+      padding: 15px;
+      background-color: #f0f0f0;
+    }
+
+    .sidebar img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    .catalogo {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .catalogo button {
+      width: 100%;
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 8px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    .main {
+      width: 75%;
+      padding: 20px;
+    }
+
+    .prodotto {
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+      display: flex;
+    }
+
+    .prodotto img {
+      width: 100px;
+      margin-right: 20px;
+    }
+
+    .info p {
+      margin: 5px 0;
+    }
+
+    .info .prezzo {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-banner">
+      <img src="img/top.jpg" alt="Banner">
+    </div>
+    <div class="nav-bar">
+      HOME | LA NOSTRA AZIENDA | I PRODOTTI | SERVIZI | CARRELLO | CONTATTI
+    </div>
+
+    <div class="content">
+      <!-- Colonna Sinistra -->
+      <div class="sidebar">
+        <img src="img/registrati-ora.jpg" alt="Registrati Ora">
+
+        <div class="login-box">
+          <h4>Login</h4>
+          <input type="text" placeholder="User / Email">
+          <input type="password" placeholder="Password">
+          <button>Accedi</button>
+        </div>
+
+        <div class="catalogo">
+          <h4>Catalogo</h4>
+          <button>Contabilità e Bilancio</button>
+          <button>Enti Locali e P.A.</button>
+          <button>Giurisprudenza e Diritto</button>
+          <button>Fiscale</button>
+          <button>Informatica</button>
+          <!-- Aggiungi altre categorie se vuoi -->
+        </div>
+      </div>
+
+      <!-- Colonna Destra -->
+      <div class="main">
+        <div class="prodotto">
+          <img src="img/prodotto1.jpg" alt="Prodotto 1">
+          <div class="info">
+            <h4>Le frodi carosello</h4>
+            <p>Categoria: Fiscale</p>
+            <p>Codice: 9788891619204</p>
+            <p class="prezzo">€ 22,00</p>
+            <p><a href="#">... maggiori informazioni</a></p>
+          </div>
+        </div>
+
+        <div class="prodotto">
+          <img src="img/prodotto2.jpg" alt="Prodotto 2">
+          <div class="info">
+            <h4>La cartella di pagamento</h4>
+            <p>Categoria: Fiscale</p>
+            <p>Codice: 9788891621115</p>
+            <p class="prezzo">€ 54,00</p>
+            <p><a href="#">... maggiori informazioni</a></p>
+          </div>
+        </div>
+
+        <!-- Altri prodotti qui... -->
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
