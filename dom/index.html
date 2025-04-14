@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+       let x = document.getElementById("miotitle")
+
+       x.style.backgroundColor="grey"; //modificare css
+       x.innerHTML="Ciao a tutti";//modificare contenuto
+       x.setAttribute("align","center");//crea attributi
+      let y= document.createElement("p"); //creare elementi
+      y.innerHTML="Lista utenti"
+      y.style.color="green"
+    </script>
+
+
+</head>
+<body>
+    <h1>
+        Internet(Web)...DOM(Browser... fa 3 cose (html,csss,js))
+
+
+        HTML : Linguaggio posiziona gli elementi
+        CSS : Linguaggio grafico
+        DOM : Libreria...dentro il browser...modifica html dinamicamente
+
+             document(attributi(variabili...) e funzioni(metodi ed azioni))
+             
+             HTML : EVENTI (mouse e tastiera) -> oneclick
+             
+             Come posso usarlo: HTML -> JS -> DOM
+
+                                1:-recupero elementi
+                                2:-modificare csss
+                                  -gestire attributi
+                                  -nuovi elementi 
+                                  -modificare il contenuto
+
+    </h1>
+    METODO : HTML -> DOM , non ha senso usarlo 
+    <h1 oneclick="document.body.style.backgroundColor=red" ></h1>
+    <h1 id="miotitle">Clicca qui</h1>
+    <input type="text" name="name" id="myInput">
+</body>
+</html>
