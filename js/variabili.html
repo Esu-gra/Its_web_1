@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //tipi : stringa , number , booolean , null e undefined 
+        //il tipo non va dichiarato 
+
+       
+        // stringa
+        let x= "bb"
+        let y='bbbbb'
+        //tamplate stringa (f string)...backtick(accento grave) ALT +96 TASTIERINO...
+        let  frase=`${x} ${y} `
+
+
+       //number 
+       let anni = 34
+       //NaN (Not a Number)
+       let risultato=isNaN(x)//x non è un numero?
+       console.log(risultato);
+       
+
+        //html : dom...string
+        function test(){
+            document.getElementById("numero").value;
+
+
+        }
+         //casting 
+        let z= parseInt(x);
+        let w =parseFloat(x);
+        
+
+    </script>
+</head>
+<body>
+    
+    <h1>Variabili</h1>
+    <input type="number" id="numero" required>
+    <button onclick="test()"></button>
+</body>
+</html>
