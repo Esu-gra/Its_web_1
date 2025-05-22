@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Scrivere un programma che dichiara e valorizza una variabile con 
+    l'anno corrente e un’altra variabile con il proprio anno di 
+    nascita e determini:
+    l’età  della persona
+    quanti anni sono necessari per raggiungere i 100
+     Restituisca in output entrambi i risultati.
+     -->
+<h1>Esercizio 3.2</h1>
+<h2 >L'età:</h2>
+<h2 id="età"></h2>
+<h2 >Anni mancanti per raggiungere i cento:</h2>
+<h2 id="cento"></h2>
+<script>
+   let anno_corrente=2025
+   let anno_nascita=1934
+   //età
+   let età= anno_corrente-anno_nascita
+   let x=100-età
+
+   document.getElementById("età").innerHTML=età
+   document.getElementById("cento").innerHTML=x
+</script>
+
+</body>
+</html>
