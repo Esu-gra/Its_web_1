@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Esercizio 5.2
+Scrivi un programma con due funzioni, la prima prende in
+ingresso un intero e verifica se sia compreso nel range da 1 a
+7. Se è compreso, la funzione restituirà TRUE, se non è
+compreso restituirà FALSE.
+La seconda funzione:
+- nel caso la prima restituisca TRUE visualizza il giorno della
+settimana corrispondente, considerando la seguente
+corrispondenza:
+1 = Lunedì
+...
+7 = Domenica
+- nel caso il giorno non sia compreso nel range, la funzione
+dovrà restituire un messaggio d'errore simile a questo:
+'Peccato, non posso indovinare il giorno -->
+   
+
+  <div id="giorno">
+
+   </div>
+    
+   <script>
+    function range(a){
+        if (1<a>7){
+            return true
+        }else{
+            return "Peccato , non possiamo indovinare il giorno"
+        }
+    }
+    
+    function verificaRange(numero) {
+        
+  return numero >= 1 && numero <= 7;
+}
+
+
+
+function mostraGiorno(numero) {
+  if (verificaRange(numero)) {
+    let giorniSettimana = {
+      1: "Lunedì",
+      2: "Martedì",
+      3: "Mercoledì",
+      4: "Giovedì",
+      5: "Venerdì",
+      6: "Sabato",
+      7: "Domenica"
+    };
+    document.getElementById("giorno").innerHTML= `Il giorno è: ${giorniSettimana[numero]}`
+    
+  } else {
+    document.getElementById("giorno").innerHTML="Peccato, non posso indovinare il giorno."
+    
+  }
+}
+let numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 7:"));
+mostraGiorno(numeroUtente);
+
+   </script>
+</body>
+</html>
