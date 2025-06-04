@@ -13,16 +13,28 @@
         somma=0
         media=0
      
-
-        for(let i in num+1){
-           console.log(somma)
-           somma+=num[i]
+        // for in 
+        // for(let i in num){
+           
+        //    somma=somma+num[i]
+           
         
-        }
+        // }
+        // console.log(somma)
 
        media=somma/num.length
-       console.log(media)
+    //    console.log(media)
         
+
+
+    // for of 
+
+    for(let v of num){
+        somma=somma+v
+    }
+    media=somma/num.length
+    console.log(somma)
+    console.log(media)
     </script>
 </body>
 </html>
