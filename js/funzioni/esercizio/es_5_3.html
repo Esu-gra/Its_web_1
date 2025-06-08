@@ -8,25 +8,28 @@
 <body>
     
   
-   
-  <div>
+   <h1  align="center">Gioca : indovina il numero </h1>
+  <div  align="center">
     <textarea name="numero" id="numero">
 
     </textarea>
     <button id="on-click">controlla</button>
   </div>
 
-  <div>
+  <div  align="center">
     <strong>Tentativi: <div style="background-color: rgb(209, 202, 202);"><p>0</p></div></strong>
-  </div>
-  <div>
+  </div > 
+  <div  align="center">
     <button>Nuovo Gioco</button>
+  </div>
+  <div align="center">
+    <p id="numeroCasuale"></p>
   </div>
   <script>
     let min = 1;
     let max = 100;
     let n= Math.random() * (max - min + 1) + min;
-    document.write(" "+n);
+    document.getElementById("numeroCasuale").innerHTML=n;
 
     function tentivo(){
          
