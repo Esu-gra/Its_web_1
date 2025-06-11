@@ -23,7 +23,7 @@ console.log((arr3));
 arr4=[...arr1]
 arr4.unshift(arr1,arr3)
 
-// ome scrivere un oggetto 
+// come scrivere un oggetto 
 
 const prof ={
     nome:"Roberto",
@@ -86,3 +86,4 @@ function list(){
 
 console.log(pippo)
 var pippo="bbbbbb" //non da errore ma undefind
+
