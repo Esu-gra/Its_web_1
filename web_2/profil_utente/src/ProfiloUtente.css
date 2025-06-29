@@ -1,0 +1,29 @@
+.profilo-card{
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.profilo-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0.2);
+}
+
+.bg-primar{
+    background-color: #279090;
+}
+
+.bg-prim {
+    background-color: #279090;
+}
+
+.bg-dar{
+    background-color: #279090;
+}
+
+
+.div-container {
+    background-color: black;
+}
+.title {
+    color: #f0f8ff;
+}
