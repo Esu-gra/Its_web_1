@@ -1,7 +1,7 @@
 import React from "react";
 import ProfiloUtente from "./ProfiloUtente.";
-import utenti from "./datiUtenti";
-import "./ProfiloUtente.css";
+import utenti from "./dati/datiUtenti";
+import "components/ProfiloUtente.css";
 
 const App = () => {
   const suddividiInRighe = (arr, grandezza) => {

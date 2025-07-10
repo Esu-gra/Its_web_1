@@ -1,9 +1,9 @@
 import React from "react";
-import ProfiloUtente from "./profiloUtente.js";
-import utenti from "./datiUtenti.js"
+import ProfiloUtente from "./components/profiloUtente.js";
+import utenti from "./dati/datiUtenti.js"
 import  'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import "./ProfiloUtente.css";
+import "./components/ProfiloUtente.css";
 
 
 const App=() =>{
