@@ -1,33 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Componente1 from './Componente1';
-import Clock from './Clock';
 
-
-
-// function getdate(date){
-//   return   date.toLocaleDateString()+" "+date.toLocaleTimeString()
-// }
-
-
+// import CleanApp from './CleanApp';
+// import FetchComponents from './FetchComponents';
 
 function App() {
-  let nome="Esu"
+  let nome = "Esu";
   return (
     <div className="App">
       <h1>Prima App React: {nome}</h1>
-      <Componente1></Componente1>
-      <Componente1/>
-      
-      <h2>
-        {
-          new Date().toLocaleDateString()+"  "+new Date().toLocaleTimeString()}
-      </h2>
-     
-      <Clock/>
-      <Clock timzeone="-6" country="USA"></Clock>
-      <Clock timezone="36" country="Italy"></Clock>
-      <Clock timeone="16" country="Japan"></Clock>
+      {/* <CleanApp /> */}
+      {/* <FetchComponents /> */}
     </div>
   );
 }
