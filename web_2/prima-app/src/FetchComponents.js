@@ -1,4 +1,4 @@
-import React, { useEffect,useState} from 'react'
+import React, {useState} from 'react'
 
 
 const url="https://jsonplaceholder.typicode.com/albums"
@@ -6,7 +6,8 @@ function FetchComponents() {
   const [albums,setAlbums]=useState([])
 
   const getData=async()=>{
-    const albums=await fetch(url).then(res=>res.json())
+    const response=await fetch(url)
+    const albums=await response.json()
     setAlbums(albums)
   }
 
