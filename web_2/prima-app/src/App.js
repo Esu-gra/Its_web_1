@@ -1,11 +1,44 @@
 // import { useState } from 'react';
-// import './App.css';
+import './App.css';
 // import {news } from './newsData';
-// import './styles.css';
+import './styles.css';
 // import Card  from './Card';
 
 // import CleanApp from './CleanApp';
-import FetchComponents from './FetchComponents';
+// import FetchComponents from './FetchComponents';
+
+
+// esercizio_1
+import Saluto from './esercizio_1/Saluto';
+
+// esercizio_2
+import CardUtente  from './esercizio_2/CardUtente';
+
+
+// esercizio_3
+import MenuRistorante from './esercizio_3/MenuRistorante';
+
+
+// esercizio_4
+import Termostato from './esercizio_4/Termostato';
+
+// esercizio_5
+import CampoRicerca from './esercizio_5/CampoRicerca';
+
+
+// esercizio_6
+import MessaggioSegreto from './esercizio_6/MessaggioSegreto';
+
+
+// esercizio_7
+import AggiornaTitolo from './esercizio_7/AggiornaTitolo';
+
+// esercizio_8
+import GalleriaFoto from './esercizio_8/Galleria';
+import ModuloContatti from './esercizio_9/ModuloContatti';
+import Blog from './esercizio_10/Blog';
+import TodoApp from './esercizio_11/TodoApp';
+
 
 function App() {
  
@@ -13,15 +46,41 @@ function App() {
     <div className="App">
       
       {/* <h1>Prima App React: {nome}</h1> */}
-       <FetchComponents></FetchComponents>
+       {/* <FetchComponents></FetchComponents> */}
       {/* <CleanApp /> */}
       {/* <FetchComponents /> */}
       {/* <LoginForm></LoginForm>
       <Esercizio5></Esercizio5>
    */}
+       <Saluto></Saluto>
+       
+       <CardUtente  
+       imgUrl="https://placehold.co/100x100"
+       nome="Mario"
+       email="esu@hhsw.com"/>
+       <CardUtente  
+       imgUrl="https://placehold.co/100x100"
+       nome="Giuseppe"
+       email="giuu@hhsw.com"/>
+       
+      <MenuRistorante/>
+      {/* <Termostato></Termostato> */}
+
+      <CampoRicerca></CampoRicerca>
+
+      <MessaggioSegreto></MessaggioSegreto>
+      <AggiornaTitolo></AggiornaTitolo>
+
+        <GalleriaFoto></GalleriaFoto>
+       <ModuloContatti></ModuloContatti>
+       <Blog></Blog>
+
+      <TodoApp></TodoApp>
     </div>
   );
 }
+
+
 //   const [darkMode,setDarkMode]=useState(false);
 //   const[mostraNews,setMostraNews]=useState(true);
 
