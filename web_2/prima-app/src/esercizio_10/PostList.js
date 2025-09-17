@@ -1,7 +1,7 @@
 import React from 'react'
 
 function PostList({posts}) { 
-    if(posts.length==0){
+    if(posts.length===0){
          return <p>Nessun post disponibile. Aggiungine uno!</p>;
     }
 

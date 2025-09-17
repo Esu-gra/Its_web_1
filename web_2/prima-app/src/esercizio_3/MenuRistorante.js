@@ -1,5 +1,6 @@
 import React from "react";
-import piatti from "../piatti";
+import piatti from "./piatti";
+
 
 function MenuRistorante(){
     return(
@@ -7,7 +8,7 @@ function MenuRistorante(){
             <h1>Menu del Ristorante</h1>
             <ul>
                {piatti.map((piatto)=>(
-                <li key={piatti.id}>
+                <li key={piatto.id}>
                     {piatto.nome  }:${piatto.prezzo}
                 </li>
                ))} 

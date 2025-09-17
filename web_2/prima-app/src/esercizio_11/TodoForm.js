@@ -10,7 +10,7 @@ function TodoForm({handleAddTask}){
     }
 
     return(
-        <form>
+        <form onSubmit={onSubmit}>
             <input
             value={text}
             onChange={(e)=>setText(e.target.value)}
@@ -19,7 +19,7 @@ function TodoForm({handleAddTask}){
 
             </input>
 
-            <button type="submit" style={{padding:'8px 12px',fontSize:16}}>
+            <button  type="submit" style={{padding:'8px 12px',fontSize:16}}>
                 Aggiungi
             </button>
         </form>

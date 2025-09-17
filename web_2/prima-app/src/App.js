@@ -64,7 +64,7 @@ function App() {
        email="giuu@hhsw.com"/>
        
       <MenuRistorante/>
-      {/* <Termostato></Termostato> */}
+      <Termostato></Termostato>
 
       <CampoRicerca></CampoRicerca>
 

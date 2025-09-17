@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+
 import { useState } from "react";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
