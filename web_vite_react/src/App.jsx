@@ -1,17 +1,15 @@
-import TodoApp from "./esercizio11/TodoApp"
+
+import MainComponent from "./useContent/MainContent"
 // import CardUtente from "CardUtente/CardUtente"
 
 function App() {
-  const persone =[{
-     name:"Esu",
-     email:"ebdkw@gfwcv",
-     imgUrl:"https://www.petdetective.it/wp-content/uploads/2016/04/gatto-toilette.jpg"
-}]
+
   
 
   return (
     <>
-    <TodoApp></TodoApp>
+    {/* <TodoApp></TodoApp> */}
+    <MainComponent></MainComponent>
 
      {/* <CardUtente name="Esu"
      email="kbfbekfb"

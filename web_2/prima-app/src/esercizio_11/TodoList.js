@@ -1,19 +1,19 @@
-import React from "react";
-import TodoItem from "./TodoItem";
+import React from 'react'
+import TodoItem from './TodoItem'
 
-function TodoList({tasks,handleDeleteTask,handleToggleTask}){
-    if(!tasks|| tasks.length===0) return <p>Nessun task ancora.</p>
-    return (
-        <ul style={{padding:0}}>
-           {tasks.map((task)=>(
-            <TodoItem 
-            key={task.id}
-            task={task}
-            handleDeleteTask={handleDeleteTask}
-            handleToggleTask={handleToggleTask}/>
-           ))}
-        </ul>
-    ) 
+const TodoList = ({tasks,onDeleteTask,onToggleTask,updateTask}) => {
+console.log("todolist->",tasks);
+  return (
+    <ul className="list-group">
+        {
+            tasks.map((t)=>{
+              return(  <TodoItem key={t.id} task={t} handleDeleteTask={onDeleteTask} onToggleTask={onToggleTask} updateTask={updateTask}></TodoItem>)
+            })
+        }
+           
+       
+    </ul>
+  )
 }
 
 export default TodoList

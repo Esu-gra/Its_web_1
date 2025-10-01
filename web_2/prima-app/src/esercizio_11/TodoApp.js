@@ -1,96 +1,69 @@
-import React, { useEffect, useState } from 'react'
-// import { useState } from 'react';
-// import { useEffect } from 'react';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList'
+import React, { useEffect, useState } from "react";
+import TodoForm from "./TodoForm";
+import TodoList from "./TodoList";
 
-const API_URL = 'http://localhost:3001/tasks';
+const API_URL = "http://localhost:3000/tasks";
+const TodoApp = () => {
+  const [tasks, setTasks] = useState([]);
 
-function TodoApp() {
-    const[tasks,setTasks]=useState([]);
-    const[loading,setLoading]=useState(false)
-    const[error,setError]=useState(null)
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  const fetchTask = async () => {
+    try {
+      const response = await fetch(API_URL);
 
-    useEffect(()=>{
-        fetchTasks();
-    },[]);
-
-    async function fetchTasks() {
-        setLoading(true);
-        setError(null);
-        
-        try{
-            const res =await fetch(API_URL);
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            const data= await res.json()
-            setTasks(data)
-        }catch(err){
-            setError(err.message || 'Errore durante il fetch');
-        }finally{
-            setLoading(false);
-        }
-    
-    }
-    
-    async function handleAddTask(text) {
-        if (!text.trim()) return;
-        try{
-            const res= await fetch(API_URL,{
-                method: 'POST',
-                headers: {'Content-Type': 'aplication/json'},
-                body: JSON.stringify({text,completed:false}),
-            });
-            if (!res.ok) throw new Error("Errore nell'aggiunta");
-            fetchTasks();
-        }catch(err){
-            setError(err.message);
-        }
-
-    }
-
-    async function handeleDeleteTask(id){
-        try{
-            const res= await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-            if (!res.ok) throw new Error("Errore nell'eliminazione");
-            fetchTasks();
-        }catch(err){
-            setError(err.message);
-        }
-    }
-
-
-    async function handleTogglseTask(id,completed) {
-        try{
-            const res = await fetch(`${API_URL}/${id}`,{
-                method: 'PATCH',
-                headers:{'Content-Type':'application/json'},
-                body:JSON.stringify({completed})
-            });
-            if(!res.ok) throw new Error("Errore nell'aggiornamento");
-            fetchTasks();
-        }catch(err){
-            setError(err.message);
-        }
-    }
-
-  return (
-    <div>
-      <h1>To-Do List</h1>
-      <TodoForm handleAddTask={handleAddTask}></TodoForm>
-      
-      {loading && <p>Caricamento...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      console.log(response);
+      const data = await response.json();
+      if (!response.ok) throw new Error("Errore nella fetch");
        
-      <TodoList
-      tasks={tasks}
-      handeleDeleteTask={handeleDeleteTask}
-      handleTogglseTask={handleTogglseTask}>
-
-      </TodoList>
-
+      setTasks(data);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const deleteTask= async (id)=>{
+    await  fetch(API_URL+"/"+id,{method:"DELETE"});
+     fetchTask()
+  }
+  const addTask=async (text)=>{
+    await fetch(API_URL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({text,completed:false})
+    })
+     fetchTask()
+  }
+  const toggleTask=async (id,completed)=>{
+    await fetch(API_URL+"/"+id,{
+      method:"PATCH",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({completed:!completed})
+    })
+     fetchTask()
+  }
+    const updateTask=async (id,text)=>{
+    await fetch(API_URL+"/"+id,{
+      method:"PATCH",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({text})
+    })
+     fetchTask()
+  }
+  useEffect(()=>{
+        fetchTask()
+  },[]);
+     if(loading) return <div className="alert alert-info">Sto caricando....</div>
+  if(error) return <div className="alert alert-danger">Errore: {error}</div>
+  return (
+    <div className="container m-4">
+      <h1 className="mb-4">Todo Do List DATA ANALYST</h1>
+      <TodoForm onAddTask={addTask}></TodoForm>
+      <TodoList tasks={tasks} onDeleteTask={deleteTask} onToggleTask={toggleTask} updateTask={updateTask}></TodoList>
     </div>
   );
-}
+};
 
-export default TodoApp
+export default TodoApp;
