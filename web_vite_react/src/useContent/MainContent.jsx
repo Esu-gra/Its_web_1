@@ -1,15 +1,17 @@
 
 
-
+const AppContext=createContentex()
 const MainComponent = () => {
   const [people, setPeople] = useState(data);
 
   const removePeople = (id) => setPeople(people.filter((el) => el.id !== id));
   return (
+    <AppContext.Provaider>
     <div>
       <h3>Passaggio di Proprietà a cascata </h3>
       <Elenco people={people} removePeople={removePeople} />
     </div>
+    </AppContext>
   );
 };
 
