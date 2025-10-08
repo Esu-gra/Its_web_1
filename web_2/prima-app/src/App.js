@@ -8,36 +8,39 @@ import './styles.css';
 // import FetchComponents from './FetchComponents';
 
 
-// esercizio_1
-import Saluto from './esercizio_1/Saluto';
+// // esercizio_1
+// import Saluto from './esercizio_1/Saluto';
 
-// esercizio_2
-import CardUtente  from './esercizio_2/CardUtente';
-
-
-// esercizio_3
-import MenuRistorante from './esercizio_3/MenuRistorante';
+// // esercizio_2
+// import CardUtente  from './esercizio_2/CardUtente';
 
 
-// esercizio_4
-import Termostato from './esercizio_4/Termostato';
-
-// esercizio_5
-import CampoRicerca from './esercizio_5/CampoRicerca';
+// // esercizio_3
+// import MenuRistorante from './esercizio_3/MenuRistorante';
 
 
-// esercizio_6
-import MessaggioSegreto from './esercizio_6/MessaggioSegreto';
+// // esercizio_4
+// import Termostato from './esercizio_4/Termostato';
+
+// // esercizio_5
+// import CampoRicerca from './esercizio_5/CampoRicerca';
 
 
-// esercizio_7
-import AggiornaTitolo from './esercizio_7/AggiornaTitolo';
+// // esercizio_6
+// import MessaggioSegreto from './esercizio_6/MessaggioSegreto';
 
-// esercizio_8
-import GalleriaFoto from './esercizio_8/Galleria';
-import ModuloContatti from './esercizio_9/ModuloContatti';
-import Blog from './esercizio_10/Blog';
-import TodoApp from './esercizio_11/TodoApp';
+
+// // esercizio_7
+// import AggiornaTitolo from './esercizio_7/AggiornaTitolo';
+
+// // esercizio_8
+// import GalleriaFoto from './esercizio_8/Galleria';
+// import ModuloContatti from './esercizio_9/ModuloContatti';
+// import Blog from './esercizio_10/Blog';
+// import TodoApp from './esercizio_11/TodoApp';
+import ProvaRouter from './router/ProvaRouter';
+import ErrorPage from './router/ErrorPage';
+// import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -52,7 +55,7 @@ function App() {
       {/* <LoginForm></LoginForm>
       <Esercizio5></Esercizio5>
    */}
-       <Saluto></Saluto>
+       {/* <Saluto></Saluto>
        
        <CardUtente  
        imgUrl="https://placehold.co/100x100"
@@ -75,7 +78,9 @@ function App() {
        <ModuloContatti></ModuloContatti>
        <Blog></Blog>
 
-      <TodoApp></TodoApp>
+      <TodoApp></TodoApp> */}
+     <ProvaRouter></ProvaRouter>
+     
     </div>
   );
 }
