@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function App() {
+function SkillSelector() {
   const skillsList = [
     { id: 1, name: "JavaScript" },
     { id: 2, name: "React" },
@@ -92,4 +92,4 @@ function App() {
   );
 }
 
-export default App;
+export default SkillSelector;
