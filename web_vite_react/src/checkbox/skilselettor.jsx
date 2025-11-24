@@ -77,6 +77,7 @@ function SkillSelector() {
           border: "1px solid",
           borderRadius: "6px",
           cursor: "pointer",
+          color:"white"
         }}
       >
         Reset

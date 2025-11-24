@@ -2,8 +2,7 @@
 .wrapper-centro {
   display: flex;
   justify-content: center;  
-  align-items: center;   
-    
+  align-items: center; 
 }
 .contenitore {
   display: inline-block; /* si adatta al contenuto */
@@ -39,6 +38,10 @@
 
 
 /* Bottone Link */
+.container-btn{
+  text-align: center;
+  margin-top: 20px;
+}
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -54,4 +57,30 @@
   background-color: #216a95;  
   transform: scale(1.05);     
   cursor: pointer;
+}
+
+
+/* Card */
+.card-container{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  margin-top: 40px;
+}
+
+/* card utente  */
+.card{
+  width: 400px;
+  padding: 20px;
+  border:1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 9 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card-title{
+  margin:0 0 10px 0;
+  font-size: 24px;
+  text-align: center;
 }
