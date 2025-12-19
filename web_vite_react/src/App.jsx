@@ -1,14 +1,14 @@
 
 // import SkillSelector from "./checkbox/skilselettor"
-import SkillSelector from "./checkbox/skilselettor"
-import Checkbox from "./esercizi_ottobre/Checkbox"
-import CambioColore from "./useState/CambiaColore"
-import InputLive from "./useState/InputLive"
+// import SkillSelector from "./checkbox/skilselettor"
+// import Checkbox from "./esercizi_ottobre/Checkbox"
+// import CambioColore from "./useState/CambiaColore"
+// import InputLive from "./useState/InputLive"
 // import MainComponent from "./useContent/MainContent"
 // import CardUtente from "CardUtente/CardUtente"
-import MostraNascondi from "./useState/MostraNascondi"
-import PizzaSelector from "./useState/PizzaSelector"
-
+// import MostraNascondi from "./useState/MostraNascondi"
+// import PizzaSelector from "./useState/PizzaSelector"
+import UserPlaceolder from "./chiamata_asinc/UserPlaceolder"
 
 function App() {
 
@@ -46,11 +46,13 @@ function App() {
   }}>
 
         {/* QUI i tuoi componenti reali */}
-          <div><PizzaSelector /></div>
+          {/* <div><PizzaSelector /></div>
           <div><InputLive /></div>
           <div> <CambioColore /></div>
           <div> <MostraNascondi></MostraNascondi></div>
-          <div><SkillSelector /></div>
+          <div><SkillSelector /></div> */}
+
+         <UserPlaceolder></UserPlaceolder>
         
           
        </div>

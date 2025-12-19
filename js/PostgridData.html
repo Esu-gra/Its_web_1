@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="root"></div>
+    <script>
+      const urlPosts = "https://jsonplaceholder.typicode.com/posts/";
+      const urlUsers = "https://jsonplaceholder.typicode.com/users/";
+      const urlCommenti = "https://jsonplaceholder.typicode.com/comments";
+
+      
+    </script>
+
+    
+</body>
+</html>
+
+const fetchData = async () => {
+    try {
+      const res = await fetch("https://example.com/users");
+      const json = await res.json();
+      setData(json);
+    } catch (e) {
+      setError(true);
+    }
+    setLoading(false);
+  };
+  fetchData();
